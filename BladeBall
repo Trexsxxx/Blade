@@ -1,0 +1,35 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Blade Ball", "BloodTheme")
+local Tab = Window:NewTab("Scirpt")
+local Section = Tab:NewSection("This is so op🤫")
+Section:NewButton("Auto Parry", "🔥", function()
+getgenv().config = getgenv().config or {
+hit_time = 0.30, -- // recommended 0.25 to 0.75 \\ --
+
+mode = 'Always', -- // Hold , Toggle , Always \\ --
+deflect_type = 'Remote', -- // Key Press , Remote \\ --
+notifications = true,
+keybind = Enum.KeyCode.V
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
+
+    print("Clicked")
+end)
+
+Section:NewButton("Auto Spam", "🔥", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Scirpt",
+	Text = "HOLD BLOCK TO SPAM🔥",
+	Duration = 5
+})
+
+getgenv().SpamSpeed = 5 -- 1-25
+
+if not getgenv().exeSpam then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+print("Clicked")
+end)
